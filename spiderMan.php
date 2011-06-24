@@ -2,7 +2,7 @@
 require 'WebSpider.php';
 require 'ImportWebsite.php';
 
-$websiteUrl = 'http://www.heathrow-airport-guide.co.uk';
+$websiteUrl = 'http://example.com'; // TARGET URL
 $webSpider = new WebSpider($websiteUrl);
 $importWebsite = new ImportWebsite($websiteUrl);
 
@@ -11,7 +11,7 @@ $websiteMap = $webSpider->getWebsiteMap();
 foreach ($websiteMap as $websiteUrl => $level){
 	$content = $webSpider->getContent($websiteUrl);
 	
-	preg_match("/http:\/\/www\.heathrow-airport-guide\.co\.uk\/(.*)?\.[html|php]/", $websiteUrl, $matches);
+	preg_match("/http:\/\/".$websiteUrl."\/(.*)?\.[html|php]/", $websiteUrl, $matches);
 	if (empty($matches)){
 		$matches[1] = 'index';
 	}
