@@ -13,7 +13,7 @@
 
 set_time_limit(0);
 
-require_once ABSPATH.'/wp-load.php';
+require_once '/wp-load.php';
 require_once 'ImportWebsite/simple_html_dom.php';
 
 class ImportWebsite

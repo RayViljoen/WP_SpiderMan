@@ -2,7 +2,7 @@
 require 'WebSpider.php';
 require 'ImportWebsite.php';
 
-$websiteUrl = 'http://example.com'; // TARGET URL
+
 $webSpider = new WebSpider($websiteUrl);
 $importWebsite = new ImportWebsite($websiteUrl);
 
